@@ -9,8 +9,8 @@ if len(sys.argv)!=2:
     sys.exit('argv error')
 else:
     try:
-        EMAIL_FROM='nexus10@163.com'
-        EMAIL_TO='nexus10@163.com'
+        EMAIL_FROM='xxx'
+        EMAIL_TO='xxx'
         EMAIL_SERVER='smtp.163.com'
 
         msg = MIMEMultipart()
@@ -27,7 +27,7 @@ else:
         msg.attach(part)
 
         server = smtplib.SMTP(EMAIL_SERVER)
-        server.login('nexus10@163.com','buxuewushu163')
+        server.login('xxxx','xxxx')
         server.sendmail(EMAIL_FROM,EMAIL_TO, msg.as_string())
     except Exception,e:
         print str(e)
